@@ -7,5 +7,5 @@ I am creating something similar to an etch-a-sketch which allows you to draw nea
 **Tasks**
 - [X] Create a grid with 16x16 divs, the divs can only be created via JS
 - [X] Hovering over the grid-box changes the color of div and has a drawing effect 
-- [ ] Give the User a way to change the grid size. Maximum is 100x100
+- [X] Give the User a way to change the grid size. Maximum is 100x100
 - [ ] Add rainbow pen

@@ -1,16 +1,15 @@
 #main-grid {
+    max-width: 960;
+    max-height: 960;
     display: flex;
     justify-content: center;
 }
 
 .grid-box {
-    height: 50px;
-    width: 50px;
+    padding: 5px;
     background-color: rgb(221, 221, 221);
 }
 
 .grid-box-black {
-    height: 50px;
-    width: 50px;
     background-color: black;
 }
