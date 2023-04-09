@@ -1,13 +1,23 @@
 const mainGrid = document.querySelector("#main-grid");
 
-
 createGrid(16);
 
-function resizeGrid() {
-  while (mainGrid.firstChild) {
-    mainGrid.removeChild(mainGrid.firstChild);
-  }
+//Creates Grid by taking size and adding rows and columns
+function createGrid(gridSize) {
+  mainGrid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  mainGrid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+  
+  let numDivs = gridSize * gridSize;
 
+  for(let i = 0; i < numDivs; i++) {
+    const gridBox = document.createElement("div");
+    mainGrid.insertAdjacentElement("beforeend", gridBox);
+    gridBox.classList.add("grid-box");
+  }
+}
+
+//Resizes Grid by user input and checks if value is over 100
+function resizeGrid() {
   const gridSize = prompt();
   if (gridSize <= 100) {
     createGrid(gridSize);
@@ -17,28 +27,6 @@ function resizeGrid() {
     createGrid(16);
   }
 }
-
-
-
-
-function createGrid(gridSize) {
-for (i=0; i<gridSize; i++) {
-    const gridColumn = document.createElement("div");
-
-    for (j=0; j<gridSize; j++) {
-        const gridBox = document.createElement("div");
-        gridBox.classList.add("grid-box");
-        gridColumn.appendChild(gridBox);
-        gridColumn.classList.add("grid-column");
-    }
-
-    mainGrid.appendChild(gridColumn)
-
-}
-}
-
-
-
 
 mainGrid.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("grid-box")) {
