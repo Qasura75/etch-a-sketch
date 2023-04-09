@@ -20,10 +20,12 @@ function createGrid(gridSize) {
 function resizeGrid() {
   const gridSize = prompt();
   if (gridSize <= 100) {
+    mainGrid.innerHTML = "";
     createGrid(gridSize);
   }
   else {
     alert("ERROR - 100 is the maximum")
+    mainGrid.innerHTML = "";
     createGrid(16);
   }
 }
