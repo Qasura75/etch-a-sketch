@@ -1,4 +1,5 @@
 const mainGrid = document.querySelector("#main-grid");
+let gridSize = 16;
 
 createGrid(16);
 
@@ -16,9 +17,14 @@ function createGrid(gridSize) {
   }
 }
 
+function deleteDrawing() {
+    mainGrid.innerHTML = "";
+    createGrid(gridSize);
+}
+
 //Resizes Grid by user input and checks if value is over 100
 function resizeGrid() {
-  const gridSize = prompt();
+  gridSize = prompt();
   if (gridSize <= 100) {
     mainGrid.innerHTML = "";
     createGrid(gridSize);

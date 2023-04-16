@@ -12,8 +12,9 @@ I am creating something similar to an etch-a-sketch which allows you to draw nea
 
 **Polish the code and the UX**
 - [X] Remade the canvas with grid
-- [ ] Resize Function needs polishing
-- [ ] 
+- [X] Resize Function needs polishing
 
 **Extra Task**
 - [ ] Add rainbow pen
+- [X] Add a reset button
+- [ ] Give it a nice design
