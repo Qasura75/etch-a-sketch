@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
     <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main-grid"></div>
-    <button onclick="resizeGrid()">Resize</button>
-    <button onclick="deleteDrawing()">Reset</button>
-    <button onclick="colorChoice = `black`, drawColor()">Black Color</button>
-    <button onclick="colorChoice = `rainbow`, drawColor()">Rainbow Color</button>
+    <div id="header">
+        <h1>Etch-A-Sketch</h1>
+    </div>
+        
+    <div id="container">
+        <div id="main-grid"></div>
+       <div id="user-interface">
+            <button id="black-btn" onclick="colorChoice = `black`, drawColor()">Black Color</button>
+            <button id="rainbow-btn" onclick="colorChoice = `rainbow`, drawColor()">Rainbow Color</button>
+            <button id="resize-btn" onclick="resizeGrid()">Resize</button>
+            <button id="delete-btn" onclick="deleteDrawing()">Reset</button>
+        </div>
+        
+    </div>
+    <div id="footer"></div>
 </body>
 </html>
